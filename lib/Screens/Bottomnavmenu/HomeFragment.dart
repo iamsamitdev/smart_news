@@ -12,6 +12,8 @@ class _HomeFragmentState extends State<HomeFragment> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.white,
         title: Text('Smart News',style: TextStyle(color: textColorSecondary),),
         actions: [
             IconButton(
@@ -82,7 +84,19 @@ class _HomeFragmentState extends State<HomeFragment> {
         ),
       ),
       body: Center(
-        child: Text('Home'),
+        child: Container(
+          margin: EdgeInsets.all(100.0),
+          width: 100.0,
+          height: 100.0,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: googleColor,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.only(top:35.0, left: 20.0,),
+            child: Text('Home', style: TextStyle(fontSize: 24, color: white_color),),
+          )
+        ),
       ),
     );
   }
